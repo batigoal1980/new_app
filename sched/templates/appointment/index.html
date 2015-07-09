@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% from 'appointment/common.html' import detail %}
+
+{% block title %}To-do items today{% endblock title %}
+
+{% block main %}
+<div class="row">
+  {% for appt in appts %}
+    <div class="span12">
+      {{ detail(appt, link_title=true, show_edit=true, show_description=true, show_duration=true, show_done=true) }}
+    </div>
+  {% else %}
+    <h3 class="span12">No To-do items. </h3>
+  {% endfor %}
+</div>
+{% endblock main %}
