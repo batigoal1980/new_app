@@ -1,6 +1,7 @@
 from flask.ext.script import Manager
 
-from sched.app import app, db
+from sched.app import app as application
+from sched.app import db
 
 
 # By default, Flask-Script adds the 'runserver' and 'shell' commands to
